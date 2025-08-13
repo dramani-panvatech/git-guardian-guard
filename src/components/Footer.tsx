@@ -3,8 +3,6 @@ import { MapPin, Phone, Mail, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
-  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
-  const [showTermsModal, setShowTermsModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -181,24 +179,17 @@ const Footer = () => {
             <div className="flex items-center space-x-6">
               <nav className="flex space-x-6 text-sm">
                 <a
-                  href="#privacy" onClick={(e) => {
-                    e.preventDefault();
-                    setShowPrivacyModal(true);
-                  }}
+                  href="/privacy-policy"
                   className="text-secondary-300 hover:text-white transition-colors duration-200"
                 >
                   Privacy Policy
                 </a>
                 <a
-                  href="#terms" onClick={(e) => {
-                    e.preventDefault();
-                    setShowTermsModal(true);
-                  }}
+                  href="/terms-of-service"
                   className="text-secondary-300 hover:text-white transition-colors duration-200"
                 >
                   Terms of Service
                 </a>
-
               </nav>
             </div>
           </div>
@@ -214,60 +205,6 @@ const Footer = () => {
       >
         <ArrowUp size={20} />
       </button>
-      {/* Privacy Policy Modal */}
-      {showPrivacyModal && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60"
-          onClick={() => setShowPrivacyModal(false)} // background click
-        >
-          <div
-            className="bg-white text-black rounded-lg max-w-2xl w-full p-6 relative"
-            onClick={(e) => e.stopPropagation()} // prevent inner click from closing
-          >
-            <button
-              onClick={() => setShowPrivacyModal(false)}
-              className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl"
-            >
-              &times;
-            </button>
-            <h2 className="text-xl font-semibold mb-4">Privacy Policy</h2>
-            <div className="space-y-3 max-h-[70vh] overflow-y-auto text-sm">
-              <p>This Privacy Policy explains how Panva Technology collects, uses, and discloses your information.</p>
-              <p>We are committed to protecting your privacy. We collect information that you provide directly and automatically through our services.</p>
-              <p>Your data will never be sold or shared without your explicit consent.</p>
-              <p>If you have any questions, contact us at <a href="mailto:support@panvatech.com" className="text-blue-600 underline">support@panvatech.com</a>.</p>
-            </div>
-          </div>
-        </div>
-      )}
-
-
-      {/* Terms of Service Modal */}
-      {showTermsModal && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60"
-          onClick={() => setShowTermsModal(false)} // background click
-        >
-          <div
-            className="bg-white text-black rounded-lg max-w-2xl w-full p-6 relative"
-            onClick={(e) => e.stopPropagation()} // prevent inner click from closing
-          >
-            <button
-              onClick={() => setShowTermsModal(false)}
-              className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl"
-            >
-              &times;
-            </button>
-            <h2 className="text-xl font-semibold mb-4">Terms of Service</h2>
-            <div className="space-y-3 max-h-[70vh] overflow-y-auto text-sm">
-              <p>Welcome to Panva Technology. By using our website or services, you agree to these Terms of Service.</p>
-              <p>You are responsible for complying with all local laws and regulations. Unauthorized use of our services may result in legal action.</p>
-              <p>We may update these terms at any time. Continued use of our services constitutes acceptance of those changes.</p>
-              <p>If you have questions, contact us at <a href="mailto:support@panvatech.com" className="text-blue-600 underline">support@panvatech.com</a>.</p>
-            </div>
-          </div>
-        </div>
-      )}
 
     </footer>
   );

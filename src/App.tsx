@@ -18,6 +18,8 @@ import AIMachineLearning from "./pages/AIMachineLearning";
 import LegalServicePlatform from "./pages/LegalServicePlatform";
 import HealthCoder from "./pages/HealthCoder";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +44,8 @@ const App = () => (
           <Route path="/fintech/solutions" element={<FinTechSolutions />} />
           <Route path="/ai-ml/solutions" element={<AIMachineLearning />} />
           <Route path="/legal/platform" element={<LegalServicePlatform />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
