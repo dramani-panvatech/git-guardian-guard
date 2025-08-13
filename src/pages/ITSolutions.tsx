@@ -24,7 +24,10 @@ import {
   Star,
   Clock,
   Mail,
-  Award
+  Award,
+  Mic,
+  Edit3,
+  FileCheck
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
@@ -108,6 +111,22 @@ const ITSolutions = () => {
       bgColor: "purple-50",
       iconColor: "purple-600",
        hreflink:"healthcare/telemedicine-platforms"
+    },
+    {
+      icon: <Mic size={48} aria-hidden="true" />,
+      title: "Health Coder",
+      description: "AI-powered healthcare documentation and coding solution.",
+      features: [
+        "AI-Driven Real-Time Transcription",
+        "Seamless Meeting Summaries",
+        "Contextual Editing & Customization",
+        "AI-Driven SOAP Notes",
+        "AI-Driven Billing Coding"
+      ],
+      color: "indigo",
+      bgColor: "indigo-50",
+      iconColor: "indigo-600",
+      hreflink:"healthcare/health-coder"
     }
   ];
 
@@ -422,8 +441,8 @@ const ITSolutions = () => {
                     ))}
                   </ul>
                   <a 
-                    href="#contact" 
-                    className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors hidden"
+                    href="/fintech/solutions" 
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
                   >
                     Learn More
                     <ArrowRight size={16} aria-hidden="true" />
@@ -468,8 +487,8 @@ const ITSolutions = () => {
                     ))}
                   </ul>
                   <a 
-                    href="#contact" 
-                    className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors hidden"
+                    href="/ai-ml/solutions" 
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
                   >
                     Learn More
                     <ArrowRight size={16} aria-hidden="true" />
@@ -514,8 +533,8 @@ const ITSolutions = () => {
                     ))}
                   </ul>
                   <a 
-                    href="#contact" 
-                    className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors hidden"
+                    href="/legal/platform" 
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
                   >
                     Learn More
                     <ArrowRight size={16} aria-hidden="true" />

@@ -13,6 +13,10 @@ import ElectronicHealthRecords from "./pages/ElectronicHealthRecords";
 import OneTriage from "./pages/OneTriage";
 import RevenueCycleManagement from "./pages/RevenueCycleManagement";
 import TelemedicinePlatforms from "./pages/TelemedicinePlatforms";
+import FinTechSolutions from "./pages/FinTechSolutions";
+import AIMachineLearning from "./pages/AIMachineLearning";
+import LegalServicePlatform from "./pages/LegalServicePlatform";
+import HealthCoder from "./pages/HealthCoder";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +38,10 @@ const App = () => (
           <Route path="/healthcare/one-triage" element={<OneTriage />} />
           <Route path="/healthcare/revenue-cycle-management" element={<RevenueCycleManagement />} />
           <Route path="/healthcare/telemedicine-platforms" element={<TelemedicinePlatforms />} />
+          <Route path="/healthcare/health-coder" element={<HealthCoder />} />
+          <Route path="/fintech/solutions" element={<FinTechSolutions />} />
+          <Route path="/ai-ml/solutions" element={<AIMachineLearning />} />
+          <Route path="/legal/platform" element={<LegalServicePlatform />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
