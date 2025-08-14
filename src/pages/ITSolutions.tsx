@@ -613,52 +613,6 @@ const ITSolutions = () => {
         </div>
       </section>
 
-      {/* On-Demand Developers Section */}
-      <section id="on-demand-developers" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
-              On-Demand Developers
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Access skilled developers on-demand to accelerate your projects with flexible engagement models 
-              and expertise across all modern technologies and frameworks.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            {onDemandDevelopersServices.map((service, index) => (
-              <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
-                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-l-orange-500 hover:-translate-y-1">
-                  <div className={`flex items-center justify-center mb-6 bg-${service.bgColor} rounded-2xl w-20 h-20`}>
-                    <span className={`text-${service.iconColor}`}>
-                      {service.icon}
-                    </span>
-                  </div>
-                  <h4 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h4>
-                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle size={20} className="text-green-500 mr-3 flex-shrink-0" aria-hidden="true" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a 
-                    href="/developers/on-demand" 
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
-                  >
-                    Learn More
-                    <ArrowRight size={16} aria-hidden="true" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
