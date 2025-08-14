@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, ChevronDown, Search, Building2, Code, Shield, Cloud, Proportions, Smartphone, Palette, Scale } from 'lucide-react';
+import { Menu, X, Phone, ChevronDown, Search, Building2, Code, Shield, Cloud, Proportions, Smartphone, Palette, Scale, Terminal } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -280,6 +280,20 @@ const Header = () => {
                         <div className="text-sm text-secondary-500">Beautiful user experiences</div>
                       </div>
                     </a>
+
+                    <a
+                      href="/developers/on-demand"
+                      className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary-50 transition-all duration-200"
+                      onClick={() => setIsServicesDropdownOpen(false)}
+                    >
+                      <div className="p-2 bg-orange-100 rounded-lg">
+                        <Terminal size={20} className="text-orange-600" />
+                      </div>
+                      <div>
+                        <div className="font-medium text-secondary-900">On-Demand Developers</div>
+                        <div className="text-sm text-secondary-500">Skilled developers on-demand</div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               )}
@@ -466,6 +480,13 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     UI/UX Services
+                  </a>
+                  <a
+                    href="/developers/on-demand"
+                    className="block px-4 py-2 text-sm text-secondary-600 hover:text-primary-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    On-Demand Developers
                   </a>
                 </div>
               )}
