@@ -27,7 +27,11 @@ import {
   Award,
   Mic,
   Edit3,
-  FileCheck
+  FileCheck,
+  Code,
+  Terminal,
+  Monitor,
+  Settings
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
@@ -307,6 +311,65 @@ const ITSolutions = () => {
     }
   ];
 
+  const onDemandDevelopersServices = [
+    {
+      icon: <Code size={48} aria-hidden="true" />,
+      title: "Frontend Development",
+      description: "Expert frontend developers skilled in modern frameworks and technologies.",
+      features: [
+        "React, Angular, Vue.js",
+        "Responsive web design",
+        "UI/UX implementation",
+        "Progressive web apps"
+      ],
+      color: "blue",
+      bgColor: "blue-50",
+      iconColor: "blue-600"
+    },
+    {
+      icon: <Terminal size={48} aria-hidden="true" />,
+      title: "Backend Development",
+      description: "Experienced backend developers for robust server-side solutions.",
+      features: [
+        "Node.js, Python, Java",
+        "API development",
+        "Database design",
+        "Cloud integration"
+      ],
+      color: "green",
+      bgColor: "green-50",
+      iconColor: "green-600"
+    },
+    {
+      icon: <Monitor size={48} aria-hidden="true" />,
+      title: "Full-Stack Development",
+      description: "Versatile full-stack developers for end-to-end project delivery.",
+      features: [
+        "Complete web applications",
+        "Mobile app development",
+        "System architecture",
+        "DevOps integration"
+      ],
+      color: "purple",
+      bgColor: "purple-50",
+      iconColor: "purple-600"
+    },
+    {
+      icon: <Settings size={48} aria-hidden="true" />,
+      title: "Specialized Solutions",
+      description: "Expert developers for niche technologies and specialized requirements.",
+      features: [
+        "AI/ML development",
+        "Blockchain solutions",
+        "IoT applications",
+        "Custom integrations"
+      ],
+      color: "orange",
+      bgColor: "orange-50",
+      iconColor: "orange-600"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -337,7 +400,7 @@ const ITSolutions = () => {
             </div>
             <div data-aos="fade-left">
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8">
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="bg-white/20 rounded-2xl p-6 text-center hover:bg-white/30 transition-all duration-300">
                     <Activity size={48} className="text-blue-300 mb-4 mx-auto" aria-hidden="true" />
                     <h5 className="font-bold text-lg">Healthcare</h5>
@@ -353,6 +416,10 @@ const ITSolutions = () => {
                   <div className="bg-white/20 rounded-2xl p-6 text-center hover:bg-white/30 transition-all duration-300">
                     <Scale size={48} className="text-yellow-300 mb-4 mx-auto" aria-hidden="true" />
                     <h5 className="font-bold text-lg">Legal</h5>
+                  </div>
+                  <div className="bg-white/20 rounded-2xl p-6 text-center hover:bg-white/30 transition-all duration-300">
+                    <Code size={48} className="text-orange-300 mb-4 mx-auto" aria-hidden="true" />
+                    <h5 className="font-bold text-lg">Developers</h5>
                   </div>
                 </div>
               </div>
@@ -534,6 +601,52 @@ const ITSolutions = () => {
                   </ul>
                   <a 
                     href="/legal/platform" 
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+                  >
+                    Learn More
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* On-Demand Developers Section */}
+      <section id="on-demand-developers" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+              On-Demand Developers
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Access skilled developers on-demand to accelerate your projects with flexible engagement models 
+              and expertise across all modern technologies and frameworks.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            {onDemandDevelopersServices.map((service, index) => (
+              <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border-l-4 border-l-orange-500 hover:-translate-y-1">
+                  <div className={`flex items-center justify-center mb-6 bg-${service.bgColor} rounded-2xl w-20 h-20`}>
+                    <span className={`text-${service.iconColor}`}>
+                      {service.icon}
+                    </span>
+                  </div>
+                  <h4 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h4>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle size={20} className="text-green-500 mr-3 flex-shrink-0" aria-hidden="true" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <a 
+                    href="/developers/on-demand" 
                     className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
                   >
                     Learn More
